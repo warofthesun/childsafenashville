@@ -59,8 +59,7 @@
 			 </defs>
 		</svg>
 	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage" >
-		<div class="bg-image" style="background-image: url(<?php echo $backgroundImg[0] ?>);"></div>
-		<div class="overlay"></div>
+
 		<div id="container">
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
@@ -97,3 +96,5 @@
 				</div>
 
 			</header>
+			<div class="bg-image" style="background-image: url(<?php echo $backgroundImg[0] ?>);"></div>
+			<!--div class="overlay"></div-->
