@@ -6,7 +6,7 @@
 <!--page- full width -->
 <?php get_header(); ?>
 
-			<div id="content">
+			<div id="content" class="full-width">
 
 				<div id="inner-content" class="wrap  row">
 
@@ -19,11 +19,6 @@
 								<header class="article-header">
 
 									<h1 class="page-title"><?php the_title(); ?></h1>
-
-									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'startertheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
 
 								</header>
 
@@ -40,7 +35,6 @@
 
 								</footer>
 
-								<?php comments_template(); ?>
 
 							</article>
 

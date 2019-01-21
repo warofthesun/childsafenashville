@@ -1683,6 +1683,9 @@ BASE (MOBILE) SIZE
 /*********************
 GENERAL STYLES
 *********************/
+.full-width #dpsp-content-bottom {
+  display: none !important; }
+
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1925,6 +1928,8 @@ HEADER STYLES
       height: 150px; } }
   .header--inner {
     background-color: #308AF6; }
+    .header--inner #logo a {
+      color: #fff; }
 
 #logo {
   margin: 0.75em 0;

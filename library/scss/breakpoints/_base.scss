@@ -2,6 +2,12 @@
 GENERAL STYLES
 *********************/
 
+.full-width {
+	#dpsp-content-bottom {
+		display: none !important;
+	}
+}
+
 .flex {
 	display: flex;
 	flex-wrap: wrap;
@@ -280,6 +286,12 @@ HEADER STYLES
 
 	&--inner {
 		background-color: $secondary;
+
+		#logo {
+			a {
+				color: $white;
+			}
+		}
 	}
 }
 
