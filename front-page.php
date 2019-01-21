@@ -17,6 +17,7 @@
 									<div class="col-xs-12 col-md-5 petition">
 										<?php the_field('petition_cta'); ?>
 										<?php the_content(); ?>
+										<br />
 										<strong>Join Your Neighbors:</strong>
 										<?php $signature_list = get_field('signature_list'); echo do_shortcode($signature_list); ?>
 										<?php $signature_count = get_field('signature_count'); echo do_shortcode($signature_count); ?>
