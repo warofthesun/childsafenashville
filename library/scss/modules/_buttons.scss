@@ -27,11 +27,10 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
 %btn {
   display: inline-block;
   position: relative;
-  font-family: $sans-serif;
+  font-family: $title;
   text-decoration: none;
   color: $white;
   font-size: 0.9em;
-  font-size: 34px;
   line-height: 34px;
   font-weight: normal;
   padding: 0 24px;
@@ -59,17 +58,22 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.accent-btn {
+.accent-btn, .dk-speakout-submit {
   @extend %btn; // here we load the btn defaults
-  background-color: $accent;
+  background-color: $secondary;
 
   &:hover,
   &:focus {
-    background-color: darken($accent, 4%);
+    background-color: darken($secondary, 4%);
   } // end hover
 
   &:active {
-    background-color: darken($accent, 5%);
+    background-color: darken($secondary, 5%);
   } // end active
 
 } // end blue button
+
+.dk-speakout-submit {
+  width: 100%;
+  padding: .5em;
+}

@@ -1,16 +1,16 @@
 <?php
 /*
- Template Name: Custom Page Example
+ Template Name: Full Width
 */
 ?>
-<!--page-custom-->
+<!--page- full width -->
 <?php get_header(); ?>
 
 			<div id="content">
 
 				<div id="inner-content" class="wrap  row">
 
-						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-xs-12" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -62,7 +62,6 @@
 
 						</main>
 
-						<?php get_sidebar(); ?>
 
 				</div>
 

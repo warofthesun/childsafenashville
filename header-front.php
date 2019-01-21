@@ -45,11 +45,25 @@
 
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
-
+<?php $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+<svg xmlns="http://www.w3.org/2000/svg" style="position:relative;height:0;width:0;display:block;">
+			 <defs>
+				 <filter id="colors">
+					 <feColorMatrix
+      type="matrix"
+      values="1 0 0 0 0
+              0 1 0 0 0
+              -0.2 0.2 0.1 0.4 0
+              0 0 0 1 0 "/>
+			   </filter>
+			 </defs>
+		</svg>
+	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage" >
+		<div class="bg-image" style="background-image: url(<?php echo $backgroundImg[0] ?>);"></div>
+		<div class="overlay"></div>
 		<div id="container">
 
-			<header class="header header--inner" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
 				<div id="inner-header" class="wrap flex flex--row flex--row_collapse">
 

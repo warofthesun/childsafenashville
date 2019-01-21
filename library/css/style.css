@@ -487,11 +487,6 @@ FONT FACE (IN YOUR FACE)
   }
 */
 /*
-The following is based of Typebase:
-https://github.com/devinhunt/typebase.css
-I've edited it a bit, but it's a nice starting point.
-*/
-/*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
@@ -1354,14 +1349,13 @@ Here's a quick video to show how it works:
 http://www.youtube.com/watch?v=hwdVpKiJzac
 
 *********************/
-.accent-btn, .comment-reply-link, #submit {
+.accent-btn, .comment-reply-link, #submit, .dk-speakout-submit {
   display: inline-block;
   position: relative;
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Baloo", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-decoration: none;
   color: #fff;
   font-size: 0.9em;
-  font-size: 34px;
   line-height: 34px;
   font-weight: normal;
   padding: 0 24px;
@@ -1370,11 +1364,11 @@ http://www.youtube.com/watch?v=hwdVpKiJzac
   cursor: pointer;
   -webkit-transition: background-color 0.14s ease-in-out;
   transition: background-color 0.14s ease-in-out; }
-  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus {
+  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .dk-speakout-submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus, .dk-speakout-submit:focus {
     color: #fff;
     text-decoration: none;
     outline: none; }
-  .accent-btn:active, .comment-reply-link:active, #submit:active {
+  .accent-btn:active, .comment-reply-link:active, #submit:active, .dk-speakout-submit:active {
     top: 1px; }
 
 /*
@@ -1382,12 +1376,16 @@ An example button.
 You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
-.accent-btn, .comment-reply-link, #submit {
-  background-color: #333; }
-  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus {
-    background-color: #292929; }
-  .accent-btn:active, .comment-reply-link:active, #submit:active {
-    background-color: #262626; }
+.accent-btn, .comment-reply-link, #submit, .dk-speakout-submit {
+  background-color: #308AF6; }
+  .accent-btn:hover, .comment-reply-link:hover, #submit:hover, .accent-btn:focus, .comment-reply-link:focus, #submit:focus, .dk-speakout-submit:hover, .dk-speakout-submit:focus {
+    background-color: #1c7ff5; }
+  .accent-btn:active, .comment-reply-link:active, #submit:active, .dk-speakout-submit:active {
+    background-color: #187cf5; }
+
+.dk-speakout-submit {
+  width: 100%;
+  padding: .5em; }
 
 /******************************************************************
 Site Name:
@@ -1437,11 +1435,11 @@ textarea,
   vertical-align: middle;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border: 0;
+  border: 1px solid #9fa6b4;
   width: 100%;
   max-width: 400px;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #f7f8fa;
+  background-color: rgba(255, 255, 255, 0.8);
   -webkit-transition: background-color 0.24s ease-in-out;
   transition: background-color 0.24s ease-in-out; }
   input[type="text"]:focus, input[type="text"]:active,
@@ -1685,19 +1683,60 @@ BASE (MOBILE) SIZE
 /*********************
 GENERAL STYLES
 *********************/
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .flex--row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+    @media only screen and (max-width: 64em) {
+      .flex--row_collapse {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
+  .flex--column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
+.dk-speakout-petition-wrap h3 {
+  display: none; }
+
+.dk-speakout-petition-wrap .dk-speakout-message, .dk-speakout-petition-wrap .dk-speakout-share {
+  display: none; }
+
+.petition {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1em;
+  border-radius: 6px;
+  -webkit-box-shadow: 1px 1px 5px rgba(54, 41, 68, 0.6);
+          box-shadow: 1px 1px 5px rgba(54, 41, 68, 0.6); }
+  .petition strong {
+    font-family: "Baloo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgba(54, 41, 68, 0.8); }
+  .petition .dk-speakout-signaturelist-count {
+    font-family: "Baloo", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
 body {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 100%;
+  font-size: 110%;
   line-height: 1.5;
-  color: #5c6b80;
-  background-color: #eaedf2;
+  color: #000;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
 img {
   image-rendering: auto; }
 
-#inner-header, #inner-footer {
+#inner-footer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1719,8 +1758,56 @@ img {
 WORDPRESS BODY CLASSES
 style a page via class
 ********************/
-/* for sites that are read right to left (i.e. hebrew) */
-/* home page */
+.home .bg-image {
+  background-size: cover;
+  -webkit-filter: url("#colors");
+          filter: url("#colors");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
+
+.home .overlay {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0); }
+
+.home #content {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+80 */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), color-stop(80%, white), to(white));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, white 80%, white 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+  margin-top: 0;
+  padding-top: 1.5em; }
+  @media only screen and (max-width: 64em) {
+    .home #content {
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+80 */
+      /* FF3.6-15 */
+      /* Chrome10-25,Safari5.1-6 */
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.8)), color-stop(80%, white), to(white));
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, white 80%, white 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+      /* IE6-9 */ } }
+  .home #content h1, .home #content h2 {
+    margin-top: 0; }
+
+.home .entry-content td, .home .entry-content tr, .home .entry-content table {
+  border: 0; }
+
+.home #container {
+  position: relative;
+  z-index: 50; }
+
+.home .entry-content {
+  padding: 0; }
+
 /* blog template page */
 /* archive page */
 /* date archive page */
@@ -1765,12 +1852,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #2980b9;
+  color: #308AF6;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #216693; }
+    color: #0a72ee; }
   a:link, a:visited:link {
     /*
 		this highlights links on iPhones/iPads.
@@ -1785,6 +1872,8 @@ H1, H2, H3, H4, H5 STYLES
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility;
   font-weight: 500;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #362944;
   /*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -1803,7 +1892,8 @@ h2, .h2 {
   margin-bottom: 0.375em; }
 
 h3, .h3 {
-  font-size: 1.125em; }
+  font-size: 1.125em;
+  text-transform: uppercase; }
 
 h4, .h4 {
   font-size: 1.1em;
@@ -1819,10 +1909,33 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #000; }
+  position: relative;
+  z-index: 99;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid #362944;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media only screen and (min-width: 64em) {
+    .header {
+      height: 150px; } }
+  .header--inner {
+    background-color: #308AF6; }
 
 #logo {
-  margin: 0.75em 0; }
+  margin: 0.75em 0;
+  font-size: 2.3em;
+  text-transform: uppercase;
+  font-family: "Baloo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-shadow: 1px 1px 5px rgba(54, 41, 68, 0.6); }
+  @media only screen and (max-width: 64em) {
+    #logo {
+      text-align: center;
+      line-height: 1;
+      margin-bottom: 1em; } }
   #logo a {
     color: #fff; }
 
@@ -1906,10 +2019,8 @@ article .hero--image img {
   height: auto; }
 
 .hentry {
-  background-color: #fff;
   border-radius: 3px;
-  margin-bottom: 1.5em;
-  border: 1px solid #ccc; }
+  margin-bottom: 1.5em; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
     padding: 1.5em; }
@@ -1950,7 +2061,7 @@ article .hero--image img {
 			but it's up to you. Feel free to change it up.
 			*/ }
   .entry-content p {
-    margin: 0 0 1.5em; }
+    margin: 0 0 1.7em; }
   .entry-content table {
     width: 100%;
     border: 1px solid #eaedf2;
@@ -1979,7 +2090,7 @@ article .hero--image img {
   .entry-content blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #333;
+    border-left: 3px solid #362944;
     font-style: italic;
     color: #9fa6b4; }
   .entry-content dd {
@@ -2094,9 +2205,9 @@ PAGE NAVI STYLES
     padding: 0.75em;
     min-width: 1em;
     display: block;
-    color: #333; }
+    color: #362944; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-      background-color: #333;
+      background-color: #362944;
       color: #fff; }
   .pagination .current {
     cursor: default;
@@ -2263,7 +2374,7 @@ FOOTER STYLES
 *********************/
 .footer {
   clear: both;
-  background-color: #000;
+  background-color: #362944;
   color: #f8f9fa; }
 
 /*
@@ -2351,6 +2462,8 @@ TABLET & SMALLER LAPTOPS
   /*********************
 GENERAL STYLES
 *********************/
+  .message {
+    padding-right: 2em; }
   /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -2367,6 +2480,16 @@ NAVIGATION STYLES
     /* end .menu ul li */
     /* highlight current page */
     /* end current highlighters */ }
+    .nav--header {
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
     .nav ul {
       background: #000;
       margin-top: 0; }

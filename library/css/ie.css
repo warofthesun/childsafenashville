@@ -77,11 +77,6 @@ FONT FACE (IN YOUR FACE)
   }
 */
 /*
-The following is based of Typebase:
-https://github.com/devinhunt/typebase.css
-I've edited it a bit, but it's a nice starting point.
-*/
-/*
 some nice typographical defaults
 more here: http://www.newnet-soft.com/blog/csstypography
 */
@@ -208,6 +203,9 @@ do they need tweaking?
 /*********************
 GENERAL STYLES
 *********************/
+.message {
+  padding-right: 2em; }
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -225,6 +223,16 @@ NAVIGATION STYLES
   /* end .menu ul li */
   /* highlight current page */
   /* end current highlighters */ }
+  .nav--header {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
   .nav ul {
     background: #000;
     margin-top: 0; }

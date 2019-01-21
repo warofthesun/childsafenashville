@@ -10,29 +10,17 @@ function my_theme_register_required_plugins() {
 	 */
 	$plugins = array(
 
-    // GitHub Updater
-		array(
-			'name'     				=> 'GitHub Updater', // The plugin name
-			'slug'     				=> 'github-updater-develop', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://github.com/afragen/github-updater/archive/develop.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
-
-    // W3 Total Cache
-		array(
-			'name'     				=> 'W3 Total Cache', // The plugin name
-			'slug'     				=> 'w3-total-cache', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/w3-total-cache.0.9.6.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '0.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
+		// SpeakOut
+	 	array(
+	 		'name'     				=> 'SpeakOut! Email Petitions', // The plugin name
+	 		'slug'     				=> 'speakout', // The plugin slug (typically the folder name)
+	 		'source'   				=> 'https://downloads.wordpress.org/plugin/speakout.zip', // The plugin source
+	 		'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+	 		'version' 				=> '1.14.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+	 		'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+	 		'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+	 		'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+	 	),
 
     // UpdraftPlus
 		array(
@@ -58,17 +46,17 @@ function my_theme_register_required_plugins() {
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		),
 
-    // Google Analytics
-		// array(
-		// 	'name'     				=> 'Google Analytics Dashboard for WP', // The plugin name
-		// 	'slug'     				=> 'google-analytics-dashboard-for-wp', // The plugin slug (typically the folder name)
-		// 	'source'   				=> 'https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.zip', // The plugin source
-		// 	'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-		// 	'version' 				=> '5.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-		// 	'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-		// 	'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-		// 	'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		// ),
+   	// Google Analytics
+	 	array(
+	 		'name'     				=> 'Google Analytics Dashboard for WP', // The plugin name
+	 		'slug'     				=> 'google-analytics-dashboard-for-wp', // The plugin slug (typically the folder name)
+	 		'source'   				=> 'https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.zip', // The plugin source
+	 		'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+	 		'version' 				=> '5.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+	 		'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+	 		'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+	 		'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+	 	),
 
     // Regenerate Thumbnails
 		array(
@@ -101,18 +89,6 @@ function my_theme_register_required_plugins() {
 			'source'   				=> 'https://downloads.wordpress.org/plugin/wp-smushit.zip', // The plugin source
 			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
 			'version' 				=> '2.7', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
-
-    // Lazy Load
-		array(
-			'name'     				=> 'BJ LazyLoad', // The plugin name
-			'slug'     				=> 'bj-lazy-load', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/bj-lazy-load.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '1.0.9', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
 			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
 			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
