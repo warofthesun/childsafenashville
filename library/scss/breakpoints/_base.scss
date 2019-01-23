@@ -93,11 +93,23 @@ style a page via class
 	.bg-image {
 		background-size: cover;
 		filter: url('#colors');
+		position: absolute;
+		width: 100%;
+		height: 350px;
+		z-index: 0;
+		background-position-x: 50%;
+		background-position-y: 35%;
+	}
+
+	.bg-image-no {
+		background-size: cover;
 		position: relative;
 		width: 100%;
 		height: 350px;
 		z-index: 0;
-		background-position: 50%;
+		background-position-x: 50%;
+		background-position-y: 35%;
+		opacity: 0.7;
 	}
 
 	.overlay {
@@ -309,7 +321,7 @@ HEADER STYLES
 		}
 
 		a {
-			color: $secondary;
+			color: rgb(140, 151, 189);
 		}
 	}
 

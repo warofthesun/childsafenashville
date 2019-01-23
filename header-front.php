@@ -51,9 +51,9 @@
 				 <filter id="colors">
 					 <feColorMatrix
       type="matrix"
-      values="1 0 0 0 0
-              0 1 0 0 0
-              -0.2 0.2 0.1 0.4 0
+      values="0 1.0 0 0 0
+              0 1.0 0 0 0
+              0 0.6 1 0 0
               0 0 0 1 0 "/>
 			   </filter>
 			 </defs>
@@ -97,4 +97,5 @@
 
 			</header>
 			<div class="bg-image" style="background-image: url(<?php echo $backgroundImg[0] ?>);"></div>
+			<div class="bg-image-no" style="background-image: url(<?php echo $backgroundImg[0] ?>);"></div>
 			<!--div class="overlay"></div-->
