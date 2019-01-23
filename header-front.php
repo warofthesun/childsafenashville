@@ -49,12 +49,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="position:relative;height:0;width:0;display:block;">
 			 <defs>
 				 <filter id="colors">
-					 <feColorMatrix
-      type="matrix"
-      values="1 0 0 0 0
-              0 1 0 0 0
-              -0.2 0.2 0.1 0.4 0
-              0 0 0 1 0 "/>
+					 <feColorMatrix type="matrix" values=".9 0 0 0 0
+					 																			0 1 0 0 0
+					 																			-0.2 0.2 0.6 0.5 0
+					 																			  0 0 0 1 0 "></feColorMatrix>
 			   </filter>
 			 </defs>
 		</svg>

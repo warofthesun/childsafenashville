@@ -1769,7 +1769,8 @@ style a page via class
   width: 100%;
   height: 350px;
   z-index: 0;
-  background-position: 50%; }
+  background-position-x: 50%;
+  background-position-y: 35%; }
 
 .home .overlay {
   position: absolute;
@@ -1942,7 +1943,7 @@ HEADER STYLES
       line-height: 1;
       margin-bottom: 1em; } }
   #logo a {
-    color: #308AF6; }
+    color: #8c97bd; }
 
 /*********************
 NAVIGATION STYLES
