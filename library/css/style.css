@@ -1941,6 +1941,8 @@ HEADER STYLES
     background-color: #308AF6; }
     .header--inner #logo a {
       color: #fff; }
+    .header--inner .nav li a:hover {
+      color: #fff; }
 
 #logo {
   margin: 0.75em 0;
@@ -2029,6 +2031,9 @@ POSTS & CONTENT STYLES
 *********************/
 #content {
   margin-top: 1.5em; }
+
+.page-template-page-full-width #content {
+  min-height: calc(100vh - 190px); }
 
 article .hero--image img {
   width: 100%;
@@ -2402,6 +2407,11 @@ FOOTER STYLES
 	override these styles for the desktop
 	view.
 	*/
+.footer-links ul li a {
+  color: #308AF6; }
+  .footer-links ul li a:hover {
+    color: #0a72ee; }
+
 /* end .footer-links */
 /*********************
 LARGER MOBILE DEVICES

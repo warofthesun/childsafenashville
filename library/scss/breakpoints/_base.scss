@@ -304,6 +304,14 @@ HEADER STYLES
 				color: $white;
 			}
 		}
+
+		.nav {
+			li {
+				a:hover {
+					color: $white;
+				}
+			}
+		}
 	}
 }
 
@@ -438,6 +446,12 @@ POSTS & CONTENT STYLES
 
 #content {
 	margin-top: 1.5em;
+}
+
+.page-template-page-full-width {
+	#content {
+		min-height:calc(100vh - 190px);
+	}
 }
 
 article {
@@ -1119,7 +1133,15 @@ FOOTER STYLES
 
 		ul {
 
-			li {}
+			li {
+				a {
+					color: $link-color;
+
+					&:hover {
+						color: $link-hover;
+					}
+				}
+			}
 
 		}
 
